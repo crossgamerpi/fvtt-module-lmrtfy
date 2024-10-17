@@ -4,11 +4,10 @@
     "title": "Tírame esta",
     "description": "Ask your players to make rolls for you.",
     "version": "3.00",
-    "author": "KaKaRoTo, iotech, Limping Ninja, Rughalt, Calego, VTT Lair, afercin",
     "authors": [
         {
-          "name": "VTT Lair",
-          "url": "https://github.com/vtt-lair"
+          "name": "afercin",
+          "url": "https://github.com/afercin"
         }
     ],
     "scripts": [
@@ -71,21 +70,6 @@
             "name": "Italiana",
             "path": "lang/it.json"
         }
-    ],
-    "systems": [
-        "dnd5e",
-        "dnd5eJP",
-        "pf1",
-        "pf2e",
-        "D35E",
-        "sw5e",
-        "cof",
-        "coc",
-        "demonlord",
-        "ose",
-        "foundry-chromatic-dungeons",
-        "degenesis",
-        "ffd20"
     ],
     "relationships": {
         "systems": [
