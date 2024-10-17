@@ -19,10 +19,10 @@
         "/css/lmrtfy.css"
     ],
     "minimumCoreVersion": "10",
-    "compatibleCoreVersion": "10",
+    "compatibleCoreVersion": "12",
     "compatibility": {
         "minimum": "10",
-        "verified": "10"
+        "verified": "12"
     },
     "languages": [
         {
