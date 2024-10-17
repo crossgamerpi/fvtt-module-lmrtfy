@@ -1,12 +1,12 @@
 name: Release Creation
 
-on: 
+on:
   release:
     types: [published]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
     - uses: actions/checkout@v2
 
@@ -43,23 +43,3 @@ jobs:
         artifacts: './module.json, ./module.zip'
         tag: ${{ github.event.release.tag_name }}
         body: ${{ github.event.release.body }}
-
-    # Publish to FoundryVTT
-    - name: Publish to Foundry VTT Repo
-      id: publish_foundry_repo
-      run: npx @ghost-fvtt/foundry-publish
-      env:
-        FVTT_MANIFEST_PATH: 'module.json'
-        FVTT_PACKAGE_ID: 26
-        FVTT_USERNAME: ${{ secrets.FOUNDRY_ADMIN_USER  }}
-        FVTT_PASSWORD: ${{ secrets.FOUNDRY_ADMIN_PW }}
-
-    # No longer working
-    #- name: FoundryVTT AutoPublish
-    #  uses: Varriount/fvtt-autopublish@v1.0.9
-    #  with:
-    #    username: ${{ secrets.FOUNDRY_ADMIN_USER }}
-    #    password: ${{ secrets.FOUNDRY_ADMIN_PW }}
-    #    module-id: 26
-    #    manifest-url: https://github.com/${{ github.repository }}/releases/download/${{ github.event.release.tag_name }}/module.json
-    #    manifest-file: ./module.json
