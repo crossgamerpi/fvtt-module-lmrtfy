@@ -1,10 +1,10 @@
 {
     "id": "lmrtfy",
     "name": "lmrtfy",
-    "title": "Let Me Roll That For You!",
+    "title": "Tírame esta",
     "description": "Ask your players to make rolls for you.",
     "version": "3.00",
-    "author": "KaKaRoTo, iotech, Limping Ninja, Rughalt, Calego, VTT Lair",
+    "author": "KaKaRoTo, iotech, Limping Ninja, Rughalt, Calego, VTT Lair, afercin",
     "authors": [
         {
           "name": "VTT Lair",
@@ -24,7 +24,7 @@
     "compatibility": {
         "minimum": "10",
         "verified": "10"
-    },        
+    },
     "languages": [
         {
             "lang": "en",
@@ -188,9 +188,9 @@
         ]
     },
     "socket": true,
-    "url": "https://github.com/League-of-Foundry-Developers/fvtt-module-lmrtfy",
-    "manifest": "https://github.com/League-of-Foundry-Developers/fvtt-module-lmrtfy/releases/latest/download/module.json",
-    "download": "https://github.com/League-of-Foundry-Developers/fvtt-module-lmrtfy/releases/download/v3.00/module.zip",
-    "changelog": "https://github.com/League-of-Foundry-Developers/fvtt-module-lmrtfy/releases",
-    "bugs": "https://github.com/League-of-Foundry-Developers/fvtt-module-lmrtfy/issues"
+    "url": "https://github.com/crossgamerpi/fvtt-module-lmrtfy",
+    "manifest": "https://github.com/crossgamerpi/fvtt-module-lmrtfy/releases/latest/download/module.json",
+    "download": "https://github.com/crossgamerpi/fvtt-module-lmrtfy/releases/latest/download/module.zip",
+    "changelog": "https://github.com/crossgamerpi/fvtt-module-lmrtfy/releases",
+    "bugs": "https://github.com/crossgamerpi/fvtt-module-lmrtfy/issues"
 }
