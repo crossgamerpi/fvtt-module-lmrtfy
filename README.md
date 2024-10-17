@@ -29,7 +29,7 @@ Your favorite system not on this list? Adding compatibility is easy! Have a look
 
 ## Installation
 
-You can now install this module automatically by specifying the following public module URL : `https://github.com/League-of-Foundry-Developers/fvtt-module-lmrtfy/releases/latest/download/module.json`
+You can now install this module automatically by specifying the following public module URL : `https://github.com/iBoMbY/fvtt-module-lmrtfy/releases/latest/download/module.json`
 
 As GM go to the `Manage Modules` options menu in your World Settings tab then enable the `Let Me Roll That For You!` module.
 
