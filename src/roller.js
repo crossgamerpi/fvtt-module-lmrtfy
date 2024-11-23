@@ -258,7 +258,7 @@ class LMRTFYRoller extends Application {
     }
 
     async _makeRoll(event, rollMethod, failRoll, ...args) {
-        let options = this._getRollOptions(event, failRoll);                
+        let options = this._getRollOptions(event, failRoll);
 
         // save the current roll mode to reset it after this roll
         const rollMode = game.settings.get("core", "rollMode");
@@ -273,13 +273,13 @@ class LMRTFYRoller extends Application {
                     switch (this.pf2Roll) {
                         case this.pf2eRollFor.ABILITY:
                             const modifier = LMRTFY.buildAbilityModifier(actor, args[0]);
-                            game.pf2e.Check.roll(modifier, { type: 'skill-check', dc: this.dc, actor }, event);
+                            game.pf2e.Check.roll(modifier, { type: 'skill-check', dc: this.dc, rollMode: this.mode, actor }, event);
                             break;
 
                         case this.pf2eRollFor.SAVE:
                             const save = actor.saves[args[0]].check;
                             const saveOptions = actor.getRollOptions(['all', `${save.ability}-based`, 'saving-throw', save.name]);
-                            save.roll({ event, saveOptions, dc: this.dc });
+                            save.roll({ event, saveOptions, dc: this.dc, rollMode: this.mode });
                             break;
 
                         case this.pf2eRollFor.SKILL:
@@ -290,7 +290,7 @@ class LMRTFYRoller extends Application {
                             if (!skill) continue;
 
                             const skillOptions = actor.getRollOptions(['all', `${skill.ability ?? 'int'}-based`, 'skill-check', skillSlug]);
-                            skill.roll({ event, skillOptions, dc: this.dc });
+                            skill.roll({ event, skillOptions, dc: this.dc, rollMode: this.mode });
                             break;
 
                         case this.pf2eRollFor.PERCEPTION:
